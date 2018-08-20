@@ -2,12 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>酒田private</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Kazuhiro Sakata Portfolio</title>
+  <meta name="description" content="酒田和宏のポートフォリオサイト">
+  <meta name="keywords" content="酒田,和宏,酒田和宏,kazuhiro,sakata,kazuhiro sakata,sakata kazuhiro,ポートフォリオ,portfolio,art,zbrush,3dcg,photoshop,conceptart,コンセプトアート">
+  <!-- OGP -->
+  <meta property="og:title" content="Kazuhiro Sakata Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="酒田和宏のポートフォリオサイト" />
+  <meta property="og:url" content="https://sakata-k.github.io/" />
+  <meta property="og:image" content="https://sakata-k.github.io/assets/img/hero_img01.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/jquery.inview.min.js"></script>
   <script type="text/javascript" src="assets/js/script.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124186108-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124186108-1');
+  </script>
 </head>
 <body>
   <div id="loding">
@@ -23,19 +43,10 @@
         <div></div>
         <div></div>
       </div>
-      <div class="menu">
-        <ul>
-          <li><a href="#top">Top</a></li>
-          <li><a href="#art">Art</a></li>
-          <li><a href="#about">About</a></li>
-  <!--        <li><a href="#works">Works</a></li>-->
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="sns">
-          <a href="https://twitter.com/sakata3333?lang=ja" target="_blank"><img src="assets/img/sns01.png" alt="twitter"></a>
-          <a href="" target="_blank"><img src="assets/img/sns02.png" alt="insta"></a>
-          <a href="" target="_blank"><img src="assets/img/sns03.png" alt="facebook"></a>
-        </div>
+      <div class="sns">
+        <a href="https://twitter.com/sakata3333?lang=ja" target="_blank"><img src="assets/img/sns01.png" alt="twitter"></a>
+        <a href="" target="_blank"><img src="assets/img/sns02.png" alt="insta"></a>
+        <a href="" target="_blank"><img src="assets/img/sns03.png" alt="facebook"></a>
       </div>
     </header>
     <div class="wrapper" id="fullpage">
@@ -143,15 +154,15 @@
 -->
       <section id="contact">
         <h2><span><img src="assets/img/h2_img04.png" alt="CONTACT"></span></h2>
-        <dl class="slide_text">
-          <dt>MAIL</dt>
-          <dd><a href="mailto:amdsakata@gmail.com?subject=問い合わせ&amp;body=ご記入ください">amdsakata@gmail.com</a></dd>
-        </dl>
+        <div class="slide_text">
+          <figure><img src="assets/img/mail.png" alt="mail"></figure>
+          <a href="mailto:amdsakata@gmail.com?subject=問い合わせ&amp;body=ご記入ください">amdsakata@gmail.com</a>
+        </div>
+        <footer id="footer">
+          <a href="#"></a>
+        </footer>
       </section>
     </div>
-    <footer id="footer">
-      <a href="#"></a>
-    </footer>
   </div>
 </body>
 </html>

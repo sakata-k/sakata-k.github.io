@@ -60,7 +60,4 @@ $(function(){
   $('#header .hum').click(function(){
     $("#header").toggleClass("open");
   });
-  $("#header a").click(function(){
-    $("#header").removeClass("open");
-  });
 });

@@ -219,123 +219,54 @@ img {
   left: 20px;
   z-index: 999;
 }
+.main #header:after {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .main #header .hum {
   display: none;
   position: fixed;
-  width: 40px;
-  height: 30px;
-  top: 27px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 27px;
   right: 23px;
   z-index: 999;
+  background-color: #0092ca;
 }
 .main #header .hum div {
   background-color: #fff;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
   height: 1px;
   opacity: 1;
 }
 .main #header .hum div:nth-child(2) {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .main #header .hum div:nth-child(3) {
   top: auto;
-  bottom: 0;
+  bottom: 15px;
 }
 @media screen and (max-width: 768px) {
   .main #header .hum {
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
-  .main #header .menu {
-    width: 60%;
-    -webkit-transition: all .24s ease;
-    transition: all .24s ease;
-    background-color: #000;
-    height: 100vh;
-    position: fixed;
-    right: -10vw;
-    top: 0;
-    padding: 100px 10%;
-    z-index: -1;
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-.main #header .menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 340px;
-}
-@media screen and (max-width: 768px) {
-  .main #header .menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main #header .menu ul li {
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .main #header .menu ul li:last-child {
-    margin-bottom: 0;
-  }
-}
-.main #header .menu ul li a {
-  position: relative;
-  -webkit-transition: all .24s ease;
-  transition: all .24s ease;
-  color: #eee;
-}
-@media screen and (max-width: 768px) {
-  .main #header .menu ul li a {
-    display: block;
-  }
-}
-.main #header .menu ul li a:after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #0092ca;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  -webkit-transition: all .24s ease;
-  transition: all .24s ease;
-}
-.main #header .menu ul li a:hover {
-  color: #0092ca;
-  -webkit-transition: all .24s ease;
-  transition: all .24s ease;
-}
-.main #header .menu ul li a:hover:after {
-  width: 100%;
-  -webkit-transition: all .24s ease;
-  transition: all .24s ease;
-}
-.main #header .menu .sns {
+.main #header .sns {
   position: fixed;
   top: 50%;
   right: 0;
@@ -343,21 +274,19 @@ img {
           transform: translateY(-50%);
 }
 @media screen and (max-width: 768px) {
-  .main #header .menu .sns {
-    position: static;
+  .main #header .sns {
     -webkit-transform: none;
             transform: none;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-top: 45px;
+    top: auto;
+    bottom: 27px;
+    right: 23px;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .24s ease;
+    transition: all .24s ease;
   }
 }
-.main #header .menu .sns a {
+.main #header .sns a {
   padding: 20px;
   background: #000;
   display: block;
@@ -367,40 +296,69 @@ img {
   transition: all .24s ease;
 }
 @media screen and (max-width: 768px) {
-  .main #header .menu .sns a {
+  .main #header .sns a {
+    background-color: #0092ca;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     padding: 0;
-    width: 30%;
+  }
+  .main #header .sns a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
-.main #header .menu .sns a:hover {
+.main #header .sns a:hover {
   background: #0092ca;
   -webkit-transition: all .24s ease;
   transition: all .24s ease;
 }
-.main #header .menu .sns a img {
+.main #header .sns a img {
   width: auto;
 }
+.main #header.open:after {
+  opacity: 1;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+}
 .main #header.open .hum div {
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  -webkit-transition: all .24s ease;
-  transition: all .24s ease;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
   top: 50%;
 }
 .main #header.open .hum div:nth-child(2) {
   opacity: 0;
 }
 .main #header.open .hum div:nth-child(3) {
-  -webkit-transform: translateY(-50%) rotate(-45deg);
-          transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
   top: auto;
   bottom: 50%;
 }
-.main #header.open .menu {
+.main #header.open .sns {
   opacity: 1;
-  z-index: 998;
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+  z-index: 999;
+}
+.main #header.open .sns a {
+  top: -120px;
   right: 0;
-  pointer-events: auto;
+}
+.main #header.open .sns a:nth-child(2) {
+  top: -100px;
+  right: 53px;
+}
+.main #header.open .sns a:nth-child(3) {
+  top: -50px;
+  right: 70px;
 }
 .main .wrapper section {
   padding: 150px 0;
@@ -625,6 +583,12 @@ img {
           filter: grayscale(100%);
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .main .wrapper #about .box .detail figure {
+    width: 130px;
+    height: 130px;
+  }
+}
 .main .wrapper #about .box .detail figure img {
   position: absolute;
   top: 50%;
@@ -641,8 +605,18 @@ img {
   transition: all 2s ease;
   width: 0;
 }
+@media screen and (max-width: 768px) {
+  .main .wrapper #about .box .skill {
+    width: 100%;
+  }
+}
 .main .wrapper #about .box .skill h3 {
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #about .box .skill h3 {
+    text-align: center;
+  }
 }
 .main .wrapper #about .box .skill dl {
   display: -webkit-box;
@@ -708,7 +682,7 @@ img {
 @media screen and (max-width: 768px) {
   .main .wrapper #about.slide .box .skill {
     width: 100%;
-    margin: 5% 0 0;
+    margin: 12% 0 0;
   }
 }
 .main .wrapper #about.slide .box .skill.on dl dd span:after {
@@ -726,39 +700,47 @@ img {
   width: 60%;
 }
 .main .wrapper #contact {
-  background: #000;
+  background: url(../img/contact_bg.jpg);
   background-size: cover;
+  background-position: center;
   position: relative;
+  z-index: 2;
 }
-.main .wrapper #contact dl {
+.main .wrapper #contact:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(1%, rgba(0, 0, 0, 0.99)), color-stop(99%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.99) 1%, rgba(0, 0, 0, 0) 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+}
+.main .wrapper #contact div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 330px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
-  font-size: 16px;
 }
-.main .wrapper #contact dl dt {
-  width: 30%;
+.main .wrapper #contact div figure {
+  width: 27px;
+  margin-right: 0.5rem;
 }
-.main .wrapper #contact dl dd {
-  width: 70%;
-}
-.main .wrapper #contact dl dd a {
+.main .wrapper #contact div a {
   color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.05em;
 }
-.main #footer {
-  background-color: #000;
+.main .wrapper #contact #footer {
   text-align: center;
   padding: 30px 0 60px;
   position: relative;
 }
-.main #footer a {
+.main .wrapper #contact #footer a {
   position: absolute;
   left: 50%;
   top: 0;
