@@ -170,7 +170,7 @@ img {
   content: "";
   width: 0;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   z-index: -1;
   position: fixed;
@@ -186,7 +186,7 @@ img {
   bottom: 27px;
   right: 23px;
   z-index: 999;
-  background-color: #0092ca;
+  background-color: #000;
 }
 .main #header .hum div {
   background-color: #fff;
@@ -246,7 +246,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .main #header .sns a {
-    background-color: #0092ca;
+    background-color: #000;
     position: absolute;
     top: -50px;
     right: 0;
