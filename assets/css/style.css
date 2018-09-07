@@ -429,11 +429,11 @@ img {
   position: relative;
   margin-right: 2%;
   margin-bottom: 2%;
+  cursor: pointer;
   top: 30px;
   opacity: 0;
   -webkit-transition: all 3s ease;
   transition: all 3s ease;
-  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .main .wrapper #art ul li {
@@ -444,8 +444,51 @@ img {
 .main .wrapper #art ul li:nth-child(3n) {
   margin-right: 0;
 }
-.main .wrapper #art ul li img {
+.main .wrapper #art ul li a {
+  height: 170px;
+  display: block;
   width: 100%;
+  overflow: hidden;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #art ul li a {
+    height: 120px;
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+}
+.main .wrapper #art ul li a img {
+  width: 100%;
+  height: 170px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #art ul li a img {
+    height: 120px;
+  }
+}
+.main .wrapper #art ul li:hover a {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+}
+.main .wrapper #art ul li:hover a img {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
 }
 .main .wrapper #art .more {
   text-align: center;
