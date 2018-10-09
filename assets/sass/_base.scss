@@ -222,7 +222,7 @@ img{
       }
       h2{
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 3rem;
         font-size: 40px;
         letter-spacing: 0.1em;
         position: relative;
@@ -230,7 +230,6 @@ img{
         font-weight: bold;
         @media screen and (max-width:768px) {
           font-size: 30px;
-          margin-bottom: 17%;
         }
         &:after{
           content: "";
@@ -244,6 +243,18 @@ img{
           @media screen and (max-width:768px) {
             top: 120%;
           }
+        }
+      }
+      .title_sub{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 4rem;
+        @media screen and (max-width:768px) {
+          font-size: 12px;
+          text-align: justify;
+          margin-bottom: 4rem;
+          width: 90%;
+          margin: 0 auto 3rem;
         }
       }
       .slide_text{
@@ -313,7 +324,7 @@ img{
         flex-wrap: wrap;
         justify-content: flex-start;
         width: 90%;
-        margin: 0 auto 10px;
+        margin: 0 auto 1rem;
         @media screen and (max-width:768px) {
           justify-content: space-between;
         }
@@ -370,26 +381,50 @@ img{
           }
         }
       }
-      .more{
-        text-align: center;
-        width: 100%;
-        a{
-          display: inline-block;
-          background-color: #000;
-          color: #fff;
-          padding: 8px 50px;
-          cursor: pointer;
-          letter-spacing: 0.15em;
-          transition: all .24s ease;
-          &:hover{
-            background-color: #0092ca;
+      .more_wrap{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: 0 auto;
+        @media screen and (max-width:768px) {
+          display: block;
+          width: 100%;
+        }
+        div{
+          text-align: center;
+          margin-right: 1rem;
+          width: 45%;
+          @media screen and (max-width:768px) {
+            margin: 0 auto 1rem;
+            width: 69%;
+          }
+          a{
+            background-color: #000;
+            display: block;
+            color: #fff;
+            padding: 8px 0;
+            cursor: pointer;
+            letter-spacing: 0.15em;
             transition: all .24s ease;
+            &:hover{
+              background-color: #0092ca;
+              transition: all .24s ease;
+            }
+          }
+          &:last-child{
+            margin-right: 0;
+            @media screen and (max-width:768px) {
+              margin: 0 auto;
+            }
           }
         }
       }
     }
     #about{
       background-color: #222831;
+      h2{
+        margin-bottom: 5rem;
+      }
       .lead{
         text-align: center;
         line-height: 1.8;
@@ -610,6 +645,11 @@ img{
         background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 1%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 1%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+      }
+      .title_sub{
+        @media screen and (max-width:768px) {
+          text-align: center;
+        }
       }
       div{
         display: flex;
