@@ -731,6 +731,89 @@ img {
 .main .wrapper #about.slide .box .skill.on dl dd:nth-child(8) span:after {
   width: 60%;
 }
+.main .wrapper #works {
+  background-color: #000;
+}
+.main .wrapper #works .title_sub {
+  text-align: center;
+}
+.main .wrapper #works ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.main .wrapper #works ul li {
+  width: 48%;
+  position: relative;
+  margin-bottom: 2rem;
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #works ul li {
+    width: 100%;
+  }
+}
+.main .wrapper #works ul li a {
+  color: #fff;
+}
+.main .wrapper #works ul li a figure {
+  font-size: 0;
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #works ul li a figure {
+    height: auto;
+  }
+}
+.main .wrapper #works ul li a figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #works ul li a figure img {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #works ul li a p {
+    font-size: 12px;
+  }
+}
+.main .wrapper #works ul li a p span {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .main .wrapper #works ul li a p span {
+    margin-top: 0.4rem;
+  }
+}
+.main .wrapper #works ul li:hover {
+  opacity: 0.7;
+  -webkit-transition: all .24s ease;
+  transition: all .24s ease;
+}
 .main .wrapper #contact {
   background: url(../img/contact_bg.jpg);
   background-size: cover;
@@ -742,7 +825,7 @@ img {
 .main .wrapper #contact:after {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 40%;
   position: absolute;
   top: 0;
   left: 0;
