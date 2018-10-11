@@ -1,0 +1,29 @@
+.wrapper.blog{
+  background-color: #222831;
+  section{
+    padding-top: 18%;
+    padding-left: 5%;
+    padding-right: 5%;
+    h2{
+      margin-bottom: 6rem;
+    }
+    p,.img{
+      margin-bottom: 2rem;
+    }
+  }
+  .back{
+    display: block;
+    text-align: left;
+    padding-bottom: 8rem;
+    width: 90%;
+    margin: 0 auto;
+    a{
+      color: #fff;
+      transition: all .24s ease;
+      &:hover{
+        color: rgba(0, 146, 202, 1);
+        transition: all .24s ease;
+      }
+    }
+  }
+}
