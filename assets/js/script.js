@@ -38,20 +38,14 @@ $(function(){
   });
 });
 
-//loading
-//$(document).ready( function(){
-//  $('#loding').addClass("active");
-//  $('#loding .text02').delay(4000).queue(function(){
-//    $('#loding').addClass("on");
-//  });
-//  $('#loding').delay(8000).queue(function(){
-//    $('#loding').css({'opacity':'0','transition':'all 3s ease'});
-//    $('.main').fadeIn(1000);
-//  });
-//});
-
-$(function(){
-  $('#header .hum').click(function(){
-    $("#header").toggleClass("open");
+//ヘッダー コールバック ハンバーガー制御
+$(window).on("load", function() {
+  $(".header_inner").load("./header.html #header",   function (){
+    $('#header .hum').click(function(){
+      $("#header").toggleClass("open");
+    });
+    $('.header_list a').click(function(){
+      $("#header").removeClass();
+    });
   });
 });

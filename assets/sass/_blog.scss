@@ -1,0 +1,41 @@
+.wrapper.blog{
+  background-color: #222831;
+  section{
+    padding-top: 12rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    @media screen and (max-width:768px) {
+      padding-top: 14%;
+    }
+    .page{
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    h2{
+      margin-bottom: 6rem;
+      font-size: 32px;
+      @media screen and (max-width:768px) {
+        font-size: 18px;
+        margin-bottom: 4rem;
+      }
+    }
+    p,.img{
+      margin-bottom: 2rem;
+    }
+  }
+  .back{
+    display: block;
+    text-align: left;
+    padding-bottom: 8rem;
+    width: 90%;
+    margin: 0 auto;
+    a{
+      color: #fff;
+      transition: all .24s ease;
+      &:hover{
+        color: rgba(0, 146, 202, 1);
+        transition: all .24s ease;
+      }
+    }
+  }
+}
