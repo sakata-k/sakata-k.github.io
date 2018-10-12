@@ -1,7 +1,7 @@
 #header{
   .hum{
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     background-color: #000;
     position: fixed;
     bottom: 4%;
@@ -14,7 +14,7 @@
       height: 1px;
       background-color: #fff;
       position: absolute;
-      top: 24px;
+      top: 21px;
       left: 50%;
       transform: translateX(-50%);
       transition: all .24s ease;
@@ -25,7 +25,7 @@
       }
       &:last-child{
         top: auto;
-        bottom: 24px;
+        bottom: 21px;
       }
     }
   }
@@ -35,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    padding: 0.8rem;
+    padding: 1.3rem 2.3rem;
     top: 0;
     right: 0;
     width: 100%;
@@ -46,9 +46,8 @@
       height: 100vh;
       width: 60%;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 0;
+      display: block;
       transition: all .24s ease;
       transform: translateX(100%);
     }
@@ -60,6 +59,7 @@
         width: 100%;
         display: block;
         text-align: center;
+        margin-top: 25vw;
       }
       li{
         margin-right: 2rem;
@@ -71,7 +71,7 @@
         a{
           display: block;
           color: #fff;
-          font-size: 12px;
+          font-size: 13px;
           transition: all .24s ease;
           @media screen and (max-width:768px) {
             font-size: 14px;

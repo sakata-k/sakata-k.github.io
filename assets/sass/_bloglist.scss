@@ -1,7 +1,10 @@
 .wrapper.blog_list{
   background-color: #222831;
   section{
-    padding-top: 18%;
+    padding-top: 12rem;
+    @media screen and (max-width:768px) {
+      padding-top: 14%;
+    }
     .title_sub{
       text-align: center;
       display: block;
@@ -10,6 +13,7 @@
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
+      max-width: 1240px;
       width: 90%;
       margin: 0 auto;
       @media screen and (max-width:768px) {
@@ -21,7 +25,7 @@
         margin-bottom: 2rem;
         margin-right: 2%;
         @media screen and (max-width:768px) {
-          width: 46%;
+          width: 48%;
           margin-right: 0;
         }
         &:last-child{
@@ -30,6 +34,8 @@
         a{
           opacity: 1;
           transition: all .24s ease;
+          display: block;
+          cursor: pointer;
           &:hover{
             opacity: 0.7;
             transition: all .24s ease;
@@ -61,11 +67,17 @@
             time{
               display: block;
               font-size: 14px;
+              @media screen and (max-width:768px) {
+                font-size: 12px;
+              }
             }
             p{
               display: block;
               text-align: justify;
               font-size: 16px;
+              @media screen and (max-width:768px) {
+                font-size: 13px;
+              }
             }
           }
         }
