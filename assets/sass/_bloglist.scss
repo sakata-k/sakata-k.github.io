@@ -28,7 +28,8 @@
           width: 48%;
           margin-right: 0;
         }
-        &:last-child{
+        &:last-child,
+        &:nth-child(3n){
           margin-right: 0;
         }
         a{
@@ -83,5 +84,14 @@
         }
       }
     }
+  }
+}
+.pagination{
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin: 3rem auto 0;
+  a{
+    color: #fff;
   }
 }
