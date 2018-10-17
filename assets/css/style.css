@@ -866,7 +866,7 @@ img {
 }
 .wrapper.blog section h2 {
   margin-bottom: 6rem;
-  font-size: 32px;
+  font-size: 28px;
   margin-top: 1rem;
 }
 @media screen and (max-width: 768px) {
@@ -875,15 +875,37 @@ img {
     margin-bottom: 4rem;
   }
 }
-.wrapper.blog section p, .wrapper.blog section .img {
+.wrapper.blog section h3, .wrapper.blog section h4, .wrapper.blog section h5, .wrapper.blog section h6 {
   margin-bottom: 2rem;
+  font-size: 16px;
+  margin-top: 4rem;
+}
+.wrapper.blog section p, .wrapper.blog section .img, .wrapper.blog section ul {
+  margin-bottom: 1.5rem;
+}
+.wrapper.blog section .img img {
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .wrapper.blog section .img img {
+    max-width: inherit;
+    width: 100%;
+  }
 }
 .wrapper.blog .back {
   display: block;
   text-align: left;
   padding-bottom: 8rem;
-  width: 90%;
-  margin: 0 auto;
+  width: 600px;
+  margin: 5rem auto 0;
+}
+@media screen and (max-width: 768px) {
+  .wrapper.blog .back {
+    width: 90%;
+  }
 }
 .wrapper.blog .back a {
   color: #fff;
@@ -894,6 +916,27 @@ img {
   color: #0092ca;
   -webkit-transition: all .24s ease;
   transition: all .24s ease;
+}
+.wrapper.blog .back .con01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .wrapper.blog .back .con01 {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper.blog .back .con01 div {
+    display: block;
+  }
+}
+.wrapper.blog .back .con02 {
+  margin-top: 1rem;
 }
 
 #header .hum {
