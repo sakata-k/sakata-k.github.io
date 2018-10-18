@@ -14,7 +14,7 @@ description: 一覧ページ
         <a href="{{ post.url }}" target="_blank">
           <div class="img"><img src="/assets/img/blog/{{ post.image }}" alt="image"></div>
           <div>
-            <time>{{ post.date | date: "%d %B %Y" }}</time>
+            <time>{{ post.date | date: "%Y.%m/%d" }}</time>
             <p>{{ post.title }}</p>
           </div>
         </a>
