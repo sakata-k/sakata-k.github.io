@@ -183,6 +183,11 @@ img{
     }
     #art{
       background: #393e46;
+      .title_sub{
+        @media screen and (max-width:768px) {
+          text-align: center;
+        }
+      }
       ul{
         display: flex;
         flex-wrap: wrap;

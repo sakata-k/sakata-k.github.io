@@ -267,6 +267,11 @@ img {
 .main .wrapper #art {
   background: #393e46;
 }
+@media screen and (max-width: 768px) {
+  .main .wrapper #art .title_sub {
+    text-align: center;
+  }
+}
 .main .wrapper #art ul {
   display: -webkit-box;
   display: -ms-flexbox;
