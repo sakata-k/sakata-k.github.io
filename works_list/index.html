@@ -1,0 +1,26 @@
+---
+layout: postlist
+title: WORKS LIST
+description: これまでに携わった制作物たち。モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。The work we have worked on so far. We produce a wide range of projects, from modeling to project mapping and web production.
+---
+
+ <div class="wrapper blog_list works_list">
+  <section>
+    <h2>WORKS</h2>
+    <p class="title_sub">これまでに携わった制作物たち。<br>モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。<br>The work we have worked on so far. <br>We produce a wide range of projects, from modeling to project mapping and web production.</p>
+    <ul>
+      {% for post in paginator.posts %}
+      <li>
+        <a href="{{ post.url }}" target="_blank">
+          <div class="img"><img src="/assets/img/works/{{ post.image }}" alt="image"></div>
+          <div>
+            <p>{{ post.title }}</p>
+            <p class="text_en">{{ post.title_en }}</p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% include pager.html %}
+  </section>
+</div>

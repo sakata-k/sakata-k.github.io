@@ -510,6 +510,24 @@ img{
           }
         }
       }
+      .more_works{
+        margin: 0 auto 1rem;
+        width: 69%;
+        a{
+          display: block;
+          background-color: #222831;
+          text-align: center;
+          color: #fff;
+          padding: 8px 0;
+          cursor: pointer;
+          letter-spacing: 0.15em;
+          transition: all .24s ease;
+          &:hover{
+            background-color: #0092ca;
+            transition: all .24s ease;
+          }
+        }
+      }
     }
     #contact{
       background: url(../img/top/contact_bg.jpg);
