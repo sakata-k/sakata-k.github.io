@@ -25,56 +25,6 @@ img{
   }
 }
 
-//#loding{
-//  position: fixed;
-//  top: 0;
-//  left: 0;
-//  background-color: #000;
-//  width: 100vw;
-//  height: 100vh;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  div{
-//    .text01,
-//    .text02{
-//      text-align: center;
-//      color: #eee;
-//      display: inline-block;
-//      width: 100%;
-//      font-size: 61px;
-//    }
-//    .text01{
-//      transition: all 4s ease;
-//      letter-spacing: 1em;
-//      filter: blur(10px);
-//    }
-//    .text02{
-//      transition: all 2s ease;
-//      opacity: 0;
-//    }
-//  }
-//  &.active{
-//    div{
-//      .text01{
-//        transition: all 5s ease;
-//        letter-spacing: 0.025em;
-//        filter: blur(0);
-//      }
-//    }
-//  }
-//  &.on{
-//    div{
-//      .text01{
-//        margin-top: -10px;
-//      }
-//      .text02{
-//        margin-top: 10px;
-//        opacity: 1;
-//      }
-//    }
-//  }
-//}
 .main{
   position: relative;
   overflow: hidden;
@@ -111,31 +61,32 @@ img{
       }
       .title_sub{
         font-size: 14px;
-        text-align: center;
-        margin-bottom: 4rem;
+        text-align: justify;
+        margin: 0 auto 4rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 930px;
         @media screen and (max-width:768px) {
           font-size: 12px;
-          text-align: justify;
           margin-bottom: 4rem;
           width: 90%;
           margin: 0 auto 3rem;
+          display: block;
         }
-      }
-      .slide_text{
-        -webkit-clip-path: inset(0 100% 0 0);
-        clip-path: inset(0 100% 0 0);
-        transition: all 5s ease;
-      }
-      &.active{
-        h2{
-          span{
-            webkit-clip-path: inset(0);
-            clip-path: inset(0);
+        span{
+          width: 48%;
+          display: block;
+          @media screen and (max-width:768px) {
+            width: 100%;
           }
-        }
-        .slide_text{
-          webkit-clip-path: inset(0);
-          clip-path: inset(0);
+          &.en{
+            font-size: 13px;
+            letter-spacing: 0;
+            @media screen and (max-width:768px) {
+              font-size: 11px;
+              margin-top: 1rem;
+            }
+          }
         }
       }
     }
@@ -161,14 +112,6 @@ img{
           }
         }
         .slider{
-//          &:after{
-//            content: "";
-//            position: absolute;
-//            width: 100%;
-//            height: 100vh;
-//            background-color: rgba(0,0,0,0.1);
-//            z-index: 2;
-//          }
           img{
             max-width: inherit;
             position: absolute;
@@ -183,69 +126,33 @@ img{
     }
     #art{
       background: #393e46;
-      .title_sub{
-        @media screen and (max-width:768px) {
-          text-align: center;
-        }
-      }
       ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 90%;
         margin: 0 auto 1rem;
         @media screen and (max-width:768px) {
           justify-content: space-between;
         }
         li{
-          width: 32%;
+          width: 100%;
           position: relative;
-          margin-right: 2%;
-          margin-bottom: 2%;
           cursor: pointer;
-          top: 30px;
-          opacity: 0;
-          transition: all 3s ease;
-          @media screen and (max-width:768px) {
-            width: 48%;
-            margin: 0 0 2%;
-          }
-          &:nth-child(3n){
-            margin-right: 0;
-          }
           a{
-            height: 170px;
             display: block;
+            font-size: 0;
             width: 100%;
             overflow: hidden;
             filter: grayscale(70%);
             transition: all .24s ease;
             @media screen and (max-width:768px) {
-              height: 120px;
               filter: grayscale(0);
             }
             img{
               width: 100%;
-              height: 170px;
-              background-color: #fff;
-              position: absolute;
-              top: 0;
-              left: 0;
-              object-fit: cover;
-              transition: all .24s ease;
-              @media screen and (max-width:768px) {
-                height: 120px;
-              } 
             }
           }
           &:hover{
             a{
               filter: grayscale(0);
               transition: all .24s ease;
-              img{
-                transform: scale(1.03);
-                transition: all .24s ease;
-              }
             }
           }
         }
@@ -254,7 +161,8 @@ img{
         display: flex;
         justify-content: center;
         width: 50%;
-        margin: 0 auto;
+        margin: 3rem auto 0;
+        max-width: 600px;
         @media screen and (max-width:768px) {
           display: block;
           width: 100%;
@@ -294,60 +202,52 @@ img{
       h2{
         margin-bottom: 5rem;
       }
-      .lead{
-        text-align: center;
-        line-height: 1.8;
+      .pic{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 2rem;
         @media screen and (max-width:768px) {
-          font-size: 12px;
+          width: 130px;
+          height: 130px;
+        }
+        img{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          object-fit: cover;
+          height: 200px;
+          @media screen and (max-width:768px) {
+            height: 130px;
+          }
         }
       }
       .box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 95%;
+        max-width: 1400px;
         margin: 0 auto;
         @media screen and (max-width:768px) {
           display: block;
         }
         .detail{
-          figure{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto;
-            position: relative;
-            margin-bottom: 2rem;
-            @media screen and (max-width:768px) {
-              width: 130px;
-              height: 130px;
-            }
-            img{
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%,-50%);
-              object-fit: cover;
-              height: 200px;
-              @media screen and (max-width:768px) {
-                height: 130px;
-              }
-            }
-          }
+          width: 100%;
         }
         .skill{
-          opacity: 0;
-          transition: all 2s ease;
-          width: 0;
+          width: 100%;
+          max-width: 930px;
+          margin: 0 auto;
           @media screen and (max-width:768px) {
             width: 95%;
-            
+            margin: 2rem auto 0;
           }
           h3{
             font-size: 24px;
+            text-align: center;
             @media screen and (max-width:768px) {
-              text-align: center;
               font-size: 20px;
             }
           }
@@ -389,61 +289,28 @@ img{
                   left: 0;
                   transform: translateY(-50%);
                   height: 98%;
-                  width: 0;
+                  width: 90%;
                   border-radius: 7px;
                 }
               }
-            }
-          }
-        }
-      }
-      &.slide{
-        .box{
-          transition: all 2s ease;
-          .detail{
-            width: 55%;
-            @media screen and (max-width:768px) {
-              width: 100%;
-            }
-          }
-          .skill{
-            opacity: 1;
-            width: 40%;
-            transition: all 2s ease;
-            margin-left: 3%;
-            @media screen and (max-width:768px) {
-              width: 95%;
-              margin: 12% auto 0;
-            }
-            &.on{
-              dl{
-                dd{
-                  span{
-                    &:after{
-                      transition: all 2s ease;
-                      width: 90%;
-                    }
+              &:nth-child(4){
+                span{
+                  &:after{
+                    width: 70%;
                   }
-                  &:nth-child(4){
-                    span{
-                      &:after{
-                        width: 70%;
-                      }
-                    }
+                }
+              }
+              &:nth-child(6){
+                span{
+                  &:after{
+                    width: 85%;
                   }
-                  &:nth-child(6){
-                    span{
-                      &:after{
-                        width: 85%;
-                      }
-                    }
-                  }
-                  &:nth-child(8){
-                    span{
-                      &:after{
-                        width: 60%;
-                      }
-                    }
+                }
+              }
+              &:nth-child(8){
+                span{
+                  &:after{
+                    width: 60%;
                   }
                 }
               }
@@ -454,9 +321,6 @@ img{
     }
     #works{
       background-color: #000;
-      .title_sub{
-        text-align: center;
-      }
       ul{
         display: flex;
         flex-wrap: wrap;
@@ -518,6 +382,7 @@ img{
       .more_works{
         margin: 0 auto 1rem;
         width: 69%;
+        max-width: 420px;
         a{
           display: block;
           background-color: #222831;
@@ -552,11 +417,6 @@ img{
         background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 1%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 1%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-      }
-      .title_sub{
-        @media screen and (max-width:768px) {
-          text-align: center;
-        }
       }
       div{
         display: flex;

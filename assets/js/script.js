@@ -20,18 +20,9 @@ $(function(){
   });
   $('.wrapper #art').on('inview', function() {
     $('.wrapper #art').addClass("active");
-    $('#art li').each(function(i) {
-      $(this).delay(500 * i).animate({opacity:1,top:0});
-    });
   });
   $('.wrapper #about').on('inview', function() {
     $('.wrapper #about').addClass("active");
-    $('#about').delay(4000).queue(function(){
-      $('#about').addClass("slide");
-    });
-    $('#about .skill').delay(6000).queue(function(){
-      $('#about .skill').addClass("on");
-    });
   });
   $('.wrapper #contact').on('inview', function() {
     $('.wrapper #contact').addClass("active");
