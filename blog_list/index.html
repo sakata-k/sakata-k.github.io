@@ -1,26 +1,95 @@
----
-layout: postlist
-title: BLOG LIST
-description: Zbrushの小技や作品制作の進捗など記事にしていきます。We will make articles such as Zbrush's tips and progress of work creation.
----
-
- <div class="wrapper blog_list">
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="max-age=86400" />
+  <title>酒田和宏 Kazuhiro Sakata | BLOG LIST</title>
+  <meta name="description" content="Zbrushの小技や作品制作の進捗など記事にしていきます。We will make articles such as Zbrush's tips and progress of work creation.">
+  <meta name="keywords" content="酒田,和宏,酒田和宏,kazuhiro,sakata,kazuhiro sakata,sakata kazuhiro,ポートフォリオ,portfolio,art,zbrush,3dcg,photoshop,conceptart,コンセプトアート">
+  <!-- OGP -->
+  <meta property="og:title" content="酒田和宏 Kazuhiro Sakata | BLOG LIST" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Zbrushの小技や作品制作の進捗など記事にしていきます。We will make articles such as Zbrush's tips and progress of work creation." />
+  <meta property="og:url" content="https://sakata-k.github.io/" />
+  <meta property="og:image" content="https://sakata-k.github.io/assets/img/top/hero_img01.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124186108-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124186108-1');
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="header_inner"></div>
+     <div class="wrapper blog_list">
   <section>
     <h2>BLOG</h2>
     <p class="title_sub">Zbrushの小技や作品制作の進捗など記事にしていきます。<br>We will make articles such as Zbrush's tips and progress of work creation.</p>
     <ul>
-      {% for post in paginator.posts %}
+      
       <li>
-        <a href="{{ post.url }}" target="_blank">
-          <div class="img"><img src="/assets/img/blog/{{ post.image }}" alt="image"></div>
+        <a href="/2018/11/26/blog" target="_blank">
+          <div class="img"><img src="/assets/img/blog/181126/hero.jpg" alt="image"></div>
           <div>
-            <time>{{ post.date | date: "%Y.%m/%d" }}</time>
-            <p>{{ post.title }}</p>
+            <time>2018.11/26</time>
+            <p>【ご報告】</p>
           </div>
         </a>
       </li>
-      {% endfor %}
+      
+      <li>
+        <a href="/2018/11/12/blog" target="_blank">
+          <div class="img"><img src="/assets/img/blog/181112/hero.jpg" alt="image"></div>
+          <div>
+            <time>2018.11/12</time>
+            <p>スピードスカルプティングの練習</p>
+          </div>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/2018/10/25/blog" target="_blank">
+          <div class="img"><img src="/assets/img/blog/181025/hero.png" alt="image"></div>
+          <div>
+            <time>2018.10/25</time>
+            <p>「Dragon Hunting」制作</p>
+          </div>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/2018/10/15/blog" target="_blank">
+          <div class="img"><img src="/assets/img/blog/181015/hero.jpg" alt="image"></div>
+          <div>
+            <time>2018.10/15</time>
+            <p>はじめに</p>
+          </div>
+        </a>
+      </li>
+      
     </ul>
-    {% include pager.html %}
+    <div class="pagination">
+  
+    <span class="previous">Previous</span>
+  
+  <span class="page_number ">1/1</span>
+  
+    <span class="next ">Next</span>
+  
+</div>
   </section>
 </div>
+  </div>
+</body>
