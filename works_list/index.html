@@ -1,26 +1,75 @@
----
-layout: postlist
-title: WORKS LIST
-description: これまでに携わった制作物たち。モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。The work we have worked on so far. We produce a wide range of projects, from modeling to project mapping and web production.
----
-
- <div class="wrapper blog_list works_list">
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="max-age=86400" />
+  <title>酒田和宏 Kazuhiro Sakata | WORKS LIST</title>
+  <meta name="description" content="これまでに携わった制作物たち。モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。The work we have worked on so far. We produce a wide range of projects, from modeling to project mapping and web production.">
+  <meta name="keywords" content="酒田,和宏,酒田和宏,kazuhiro,sakata,kazuhiro sakata,sakata kazuhiro,ポートフォリオ,portfolio,art,zbrush,3dcg,photoshop,conceptart,コンセプトアート">
+  <!-- OGP -->
+  <meta property="og:title" content="酒田和宏 Kazuhiro Sakata | WORKS LIST" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="これまでに携わった制作物たち。モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。The work we have worked on so far. We produce a wide range of projects, from modeling to project mapping and web production." />
+  <meta property="og:url" content="https://sakata-k.github.io/" />
+  <meta property="og:image" content="https://sakata-k.github.io/assets/img/top/hero_img01.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124186108-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124186108-1');
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="header_inner"></div>
+     <div class="wrapper blog_list works_list">
   <section>
     <h2>WORKS</h2>
     <p class="title_sub">これまでに携わった制作物たち。<br>モデリングからプロジェクションマッピング、Web制作など幅広く制作しています。<br>The work we have worked on so far. <br>We produce a wide range of projects, from modeling to project mapping and web production.</p>
     <ul>
-      {% for post in paginator.posts %}
+      
       <li>
-        <a href="{{ post.url }}" target="_blank">
-          <div class="img"><img src="/assets/img/works/{{ post.image }}" alt="image"></div>
+        <a href="/2016/10/07/works" target="_blank">
+          <div class="img"><img src="/assets/img/works/161007/hero.png" alt="image"></div>
           <div>
-            <p>{{ post.title }}</p>
-            <p class="text_en">{{ post.title_en }}</p>
+            <p>金沢駅鼓門 鑑賞型プロジェクションマッピング2016</p>
+            <p class="text_en">Kanazawa station Kotori appreciation type projection mapping 2016</p>
           </div>
         </a>
       </li>
-      {% endfor %}
+      
+      <li>
+        <a href="/2016/10/06/works" target="_blank">
+          <div class="img"><img src="/assets/img/works/161006/hero.png" alt="image"></div>
+          <div>
+            <p>金沢駅鼓門 参加型プロジェクションマッピング2016</p>
+            <p class="text_en">Production and implementation of "Kanazawa Station Karumon Participatory Projection Mapping 2016".</p>
+          </div>
+        </a>
+      </li>
+      
     </ul>
-    {% include pager.html %}
+    <div class="pagination">
+  
+    <span class="previous">Previous</span>
+  
+  <span class="page_number ">1/1</span>
+  
+    <span class="next ">Next</span>
+  
+</div>
   </section>
 </div>
+  </div>
+</body>
