@@ -3,3 +3,6 @@
 
 Welcome to Kazuhiro Sakata page!
 Please look at my Portfolio page.
+
+jekyll server
+jekyll build
